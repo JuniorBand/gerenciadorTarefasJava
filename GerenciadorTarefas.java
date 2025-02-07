@@ -1,22 +1,4 @@
-/*Projeto: Gerenciador de Lista de Tarefas
-Descrição do Problema
-Você deve criar um programa em Java que gerencie uma lista de tarefas simples. O programa deve permitir que o usuário realize as seguintes operações:
-
-Adicionar uma nova tarefa: O usuário insere o nome de uma tarefa, que é adicionada à lista.
-Exibir todas as tarefas: Mostre as tarefas em formato de lista, indicando quais estão concluídas e quais não estão.
-Marcar uma tarefa como concluída: O usuário seleciona uma tarefa pelo número e ela é marcada como concluída.
-Remover uma tarefa: O usuário seleciona uma tarefa pelo número e ela é removida da lista.
-Encerrar o programa: Saia do programa quando o usuário escolher.
-Requisitos
-Cada tarefa deve ter:
-Um nome.
-Um status (concluída ou não).
-O programa deve apresentar um menu interativo com as opções acima.
-Se o usuário tentar realizar uma ação com um número inválido de tarefa, exiba uma mensagem de erro amigável.
-O programa deve rodar em loop até o usuário escolher sair.
-Desafios Adicionais (opcional)
-Permita que o usuário edite o nome de uma tarefa existente.
-Salve as tarefas em um arquivo para que possam ser carregadas ao reabrir o programa.
+/*
 */
 
 //try throws
@@ -29,8 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import lombok.Data;
-//import lombok.Setter;
+
 
 
 
@@ -197,39 +178,6 @@ public class GerenciadorTarefas {
 
 }
 
-@Data
-class Tarefa{
-	String name;
-	boolean status;
-	String description;
-	int index;
 
-	void addTarefa(String name, boolean status, String description, int index){
-		this.name = name;
-		this.status = status;
-		this.description = description;
-		this.index = index;
-	}
-
-
-	void showTarefa(){
-		System.out.println("\n*=====* " + name + " *=====*");
-		System.out.println("Descrição: " + description);
-		if (status == true){System.out.println("Status: Concluída");}
-		if (status == false){System.out.println("Status: Não Concluída");}
-		System.out.println("ID: " + index +"\n");
-	}
-
-
-    // Métodos setters e getters (Caso: sem Lombok)
-    // public void setName(String name) { this.name = name; }
-    // public void setStatus(boolean status) { this.status = status; }
-    // public void setDescription(String description) { this.description = description; }
-    // public String getName() { return name; }
-    // public boolean getStatus() { return status; }
-    // public String getDescription() { return description; }
-    // public int getId() { return index; }
-
-}
 
 
