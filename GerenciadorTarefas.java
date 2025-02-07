@@ -50,7 +50,7 @@ public class GerenciadorTarefas {
 							scanner.nextLine();
 							boolean status = false;
 							if (mark1 == 1) { status = true; }
-							if (mark1 == 2) { status = false; }
+							else if (mark1 == 2) { status = false; }
 							else { System.out.println("\u001B[31mNúmero inválido, será marcado como Não Concluída."); 
 									System.out.print("Pressione Enter para voltar ao menu...\u001B[0m");
 									scanner.nextLine();
@@ -80,7 +80,7 @@ public class GerenciadorTarefas {
 							try{
 							int k = scanner.nextInt();
 							list.get(k-1).setStatus(true);
-							} catch(InputMismatchException e){
+							} catch(IndexOutOfBoundsException | InputMismatchException e){
 								System.out.println("\u001B[31mEntrada inválida. Por favor, insira um número do ID correto.");
 								scanner.nextLine();  // Limpa o buffer de entrada
 								System.out.print("Pressione Enter para voltar ao menu...\u001B[0m");
@@ -96,7 +96,7 @@ public class GerenciadorTarefas {
 							int l = scanner.nextInt();
 							scanner.nextLine();
 							list.remove(l-1);
-							} catch(Exception e){
+							} catch(InputMismatchException | IndexOutOfBoundsException e){
 								System.out.println("\u001B[31mEntrada inválida. Por favor, insira um número do ID correto.");
 								scanner.nextLine(); // Limpa o buffer de entrada
 								System.out.print("Pressione Enter para voltar ao menu...\u001B[0m");
@@ -127,10 +127,17 @@ public class GerenciadorTarefas {
 										if (resp1.equals("S")) {list.get(m-1).setStatus(false);}
 										if (resp1.equals("N")) {break;}							
 									}
+									else {
+										System.out.println("\u001B[31mÍndice inválido!");
+										System.out.print("Pressione Enter para voltar ao menu...\u001B[0m");
+										scanner.nextLine(); // Limpa o buffer de entrada
+									}
 								} else {
-									System.out.println("\u001B[31mÍndice inválido!\u001B[0m");
+									System.out.println("\u001B[31mÍndice inválido!");
+									System.out.print("Pressione Enter para voltar ao menu...\u001B[0m");
+									scanner.nextLine(); // Limpa o buffer de entrada
 								}
-							}catch (Exception e){
+							}catch (InputMismatchException e){
 								System.out.println("\u001B[31mEntrada inválida. Por favor, insira um número válido.");
 								scanner.nextLine(); // Limpa o buffer de entrada
 								System.out.print("Pressione Enter para voltar ao menu...\u001B[0m");
@@ -153,7 +160,7 @@ public class GerenciadorTarefas {
 								} else if (resposta.equals("N")) {
 									input = 0;  // Retorna ao menu
 								} else {
-									throw new InputMismatchException();  // Lança exceção para tratar entrada inválida
+									throw new InputMismatchException ();  // Lança exceção para tratar entrada inválida
 							}
 							} catch (InputMismatchException e) {
 								System.out.println("\u001B[31mEntrada inválida. Digite 'S' para sair ou 'N' para voltar ao menu.");
