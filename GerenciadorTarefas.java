@@ -221,7 +221,7 @@ class Tarefa{
 	}
 
 
-    // Métodos setters e getters
+    // Métodos setters e getters (Caso: sem Lombok)
     // public void setName(String name) { this.name = name; }
     // public void setStatus(boolean status) { this.status = status; }
     // public void setDescription(String description) { this.description = description; }
