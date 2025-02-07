@@ -22,7 +22,7 @@ Um simples Gerenciador de Tarefas em Java.
 
   <br>
   <p align="center">
-    <img alt="imagem do programa rodando no terminal (adicionando tarefas).png" src="./assets/img1.png" width="100%">
+    <img alt="imagem do programa rodando no terminal (adicionando tarefas).png" src="./assets/img1.png" width=50%>
   </p>
 
   <br>
@@ -31,7 +31,7 @@ Um simples Gerenciador de Tarefas em Java.
 
   <br>
   <p align="center">
-    <img alt="imagem do programa rodando no terminal (mostrando tarefas)" src="./assets/img2.png" width="100%">
+    <img alt="imagem do programa rodando no terminal (mostrando tarefas)" src="./assets/img2.png" width="45%">
   </p>
 
   <br>
@@ -40,7 +40,7 @@ Um simples Gerenciador de Tarefas em Java.
   ### _Edite suas tarefas:_
   <br>
   <p align="center">
-    <img alt="imagem do programa rodando no terminal (mostrando tarefas)" src="./assets/img3.png" width="100%">
+    <img alt="imagem do programa rodando no terminal (mostrando tarefas)" src="./assets/img3.png" width="60%">
   </p>
 
 
