@@ -1,2 +1,2 @@
 #ignore compilated .class java files
-*.class
+bin
