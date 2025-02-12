@@ -1,15 +1,12 @@
-/*
-*/
-
-//try throws
-
-//Pesquisar Maps e HashMaps
-
-
+/**
+ * @author Júnior Bandeira
+ * @since v1.0
+ */
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -19,7 +16,7 @@ public class GerenciadorTarefas {
 	
 	public static void main(String[] args) throws ArithmeticException, IOException, IndexOutOfBoundsException{
 		Scanner scanner = new Scanner(System.in);
-		ArrayList<Tarefa> list = new ArrayList<Tarefa>();
+		List<Tarefa> list = new ArrayList<>();
 		
 
 				int input = 0;
