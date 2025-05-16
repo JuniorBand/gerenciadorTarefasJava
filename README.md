@@ -55,7 +55,7 @@ Esse projeto desenvolvido com:
 
 ## 🔱 _Descrição_
 
-(Provida pelo ChatGPT-4-turbo)
+(Provida pelo ChatGPT-4-turbo - para fins de aprendizado)
 
 Projeto: Gerenciador de Lista de Tarefas
 Descrição do Problema
