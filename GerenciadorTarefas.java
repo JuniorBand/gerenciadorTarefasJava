@@ -13,7 +13,13 @@ import java.util.Scanner;
 
 
 public class GerenciadorTarefas {
-	
+
+	public static void clearScreen() {
+		// Clear the console screen
+		System.out.print("\033[H\033[2J");
+		System.out.flush();
+	}
+
 	public static void main(String[] args) throws ArithmeticException, IOException, IndexOutOfBoundsException{
 		Scanner scanner = new Scanner(System.in);
 		List<Tarefa> list = new ArrayList<>();
@@ -21,6 +27,7 @@ public class GerenciadorTarefas {
 
 				int input = 0;
 				while (input != 6){
+					clearScreen();
 					System.out.println("\n \u001B[32m\u001B[1m*=====* <Gerenciador de Tarefas> *=====*\u001B[0m\u001B[36m\n\u001B[3m1. > Adicionar Tarefa\n2. > Exibir Tarefas\n3. > Marcar Tarefa como \"Concluída\"\n4. > Apagar Tarefa\n5. > Editar Tarefa\n6. > Sair \u001B[0m\u001B[33m\u001B[3m");
 				
 					try {
